@@ -33,7 +33,7 @@
             this.buttonConnect = new System.Windows.Forms.Button();
             this.labelPoort = new System.Windows.Forms.Label();
             this.comboBoxPoort = new System.Windows.Forms.ComboBox();
-            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageInstellingen = new System.Windows.Forms.TabPage();
             this.checkBoxDtrEnable = new System.Windows.Forms.CheckBox();
             this.checkBoxRtsEnable = new System.Windows.Forms.CheckBox();
@@ -91,7 +91,7 @@
             this.labelStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.serialPortArduino = new System.IO.Ports.SerialPort(this.components);
             this.timerOefening5 = new System.Windows.Forms.Timer(this.components);
-            this.tabControl.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.tabPageInstellingen.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -159,23 +159,24 @@
             this.comboBoxPoort.TabIndex = 5;
             this.comboBoxPoort.DropDown += new System.EventHandler(this.cboPoort_DropDown);
             // 
-            // tabControl
+            // tabControl1
             // 
-            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl.Controls.Add(this.tabPageInstellingen);
-            this.tabControl.Controls.Add(this.tabPageOefening1);
-            this.tabControl.Controls.Add(this.tabPageOefening2);
-            this.tabControl.Controls.Add(this.tabPageOefening3);
-            this.tabControl.Controls.Add(this.tabPageOefening4);
-            this.tabControl.Controls.Add(this.tabPageOefening5);
-            this.tabControl.Location = new System.Drawing.Point(16, 65);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(4);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1045, 513);
-            this.tabControl.TabIndex = 9;
+            this.tabControl1.Controls.Add(this.tabPageInstellingen);
+            this.tabControl1.Controls.Add(this.tabPageOefening1);
+            this.tabControl1.Controls.Add(this.tabPageOefening2);
+            this.tabControl1.Controls.Add(this.tabPageOefening3);
+            this.tabControl1.Controls.Add(this.tabPageOefening4);
+            this.tabControl1.Controls.Add(this.tabPageOefening5);
+            this.tabControl1.Location = new System.Drawing.Point(16, 65);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1045, 513);
+            this.tabControl1.TabIndex = 9;
+            this.tabControl1.TabIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabPageInstellingen
             // 
@@ -878,7 +879,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1077, 609);
             this.Controls.Add(this.statusStrip);
-            this.Controls.Add(this.tabControl);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.radioButtonVerbonden);
             this.Controls.Add(this.buttonConnect);
             this.Controls.Add(this.labelPoort);
@@ -887,7 +888,7 @@
             this.Name = "Form1";
             this.Text = "BZL seriële communicatie Josse Imberechts";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tabControl.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.tabPageInstellingen.ResumeLayout(false);
             this.tabPageInstellingen.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -927,7 +928,7 @@
         internal System.Windows.Forms.Button buttonConnect;
         internal System.Windows.Forms.Label labelPoort;
         internal System.Windows.Forms.ComboBox comboBoxPoort;
-        internal System.Windows.Forms.TabControl tabControl;
+        internal System.Windows.Forms.TabControl tabControl1;
         internal System.Windows.Forms.TabPage tabPageInstellingen;
         internal System.Windows.Forms.CheckBox checkBoxDtrEnable;
         internal System.Windows.Forms.CheckBox checkBoxRtsEnable;
